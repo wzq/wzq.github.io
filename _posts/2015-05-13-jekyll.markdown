@@ -5,8 +5,8 @@ date:   2015-05-13
 categories: jekyll update
 ---
 
-使用环境，mac预制了ruby， 然后使用 $ gem install jekyll --pre 即可。
-在此之前确保你安装了xcode commendline tools
+使用环境，mac预制了ruby， 然后使用 $ gem install jekyll --pre 即可  
+在此之前确保你安装了xcode commendline tools  
 安装完毕后cd到你的开发目录下面使用jekyll命令：
 
 {% highlight ruby %}
@@ -18,13 +18,13 @@ $ jekyll serve
 在浏览器 localhost:4000 ok 界面出来了 你看到就是一个简单的博客的界面了。
 
 使用之前首先要看一下jekyll的目录结构[Jekyll docs][jekyll-docs]，官方文档很详细，
-不过描述不够清晰，反正我开始看着有点晕。
-一个关键文件：config.xml 总配置文件，属性非常之多，具体查看文档。
-三个关键目录:include, layout, posts.
+不过描述不够清晰    
+一个关键文件：_config.xml 总配置文件，属性非常之多，具体查看文档   
+三个关键目录：_includes, _layouts, _posts
 
-include：存放复用的代码，比如head foot,用的时候只需要include就行。
-post：存放你的内容，不需要使用的是[markdown][markdown]比html更简洁 不过需要花时间学习
-layout：存放代码模版，调用方式以本文为例：
+- includes：存放复用的代码，比如head foot,用的时候只需要include就行。
+- posts：存放你的内容，不需要使用的是[markdown][markdown]比html更简洁 不过需要花时间学习
+- layouts：存放代码模版，调用方式以本文为例：
 
 {% highlight ruby %}
 ---

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>关于使用jekyll构建blog</title>
-  <meta name="description" content="使用环境，mac预制了ruby， 然后使用 $ gem install jekyll –pre 即可。在此之前确保你安装了xcode commendline tools安装完毕后cd到你的开发目录下面使用jekyll命令：">
+  <meta name="description" content="使用环境，mac预制了ruby， 然后使用 $ gem install jekyll –pre 即可在此之前确保你安装了xcode commendline tools安装完毕后cd到你的开发目录下面使用jekyll命令：">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="www.baidu.com/jekyll/update/2015/05/13/jekyll.html">
@@ -21,7 +21,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">WZQ</a>
+    <a class="site-title" href="/" style="color:white">WZQ</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -32,19 +32,19 @@
         </svg>
       </a>
 
-      <div class="trigger">
+ <!--      <div class="trigger">
         
           
-          <a class="page-link" href="/about/">About</a>
-          
-        
+          <a class="page-link" href="/about/" style="color:white">About</a>
           
         
           
         
           
         
-      </div>
+          
+        
+      </div> -->
     </nav>
 
   </div>
@@ -62,8 +62,8 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>使用环境，mac预制了ruby， 然后使用 $ gem install jekyll –pre 即可。
-在此之前确保你安装了xcode commendline tools
+    <p>使用环境，mac预制了ruby， 然后使用 $ gem install jekyll –pre 即可<br />
+在此之前确保你安装了xcode commendline tools<br />
 安装完毕后cd到你的开发目录下面使用jekyll命令：</p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">jekyll</span> <span class="kp">new</span> <span class="n">myblog</span>
@@ -73,13 +73,15 @@
 <p>在浏览器 localhost:4000 ok 界面出来了 你看到就是一个简单的博客的界面了。</p>
 
 <p>使用之前首先要看一下jekyll的目录结构<a href="http://jekyllrb.com/docs/home">Jekyll docs</a>，官方文档很详细，
-不过描述不够清晰，反正我开始看着有点晕。
-一个关键文件：config.xml 总配置文件，属性非常之多，具体查看文档。
-三个关键目录:include, layout, posts.</p>
+不过描述不够清晰  <br />
+一个关键文件：_config.xml 总配置文件，属性非常之多，具体查看文档 <br />
+三个关键目录：_includes, _layouts, _posts</p>
 
-<p>include：存放复用的代码，比如head foot,用的时候只需要include就行。
-post：存放你的内容，不需要使用的是<a href="http://wowubuntu.com/markdown/">markdown</a>比html更简洁 不过需要花时间学习
-layout：存放代码模版，调用方式以本文为例：</p>
+<ul>
+  <li>includes：存放复用的代码，比如head foot,用的时候只需要include就行。</li>
+  <li>posts：存放你的内容，不需要使用的是<a href="http://wowubuntu.com/markdown/">markdown</a>比html更简洁 不过需要花时间学习</li>
+  <li>layouts：存放代码模版，调用方式以本文为例：</li>
+</ul>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">---</span>
 <span class="ss">layout: </span><span class="n">post</span>
@@ -149,7 +151,7 @@ jekyll项目update到这个github，浏览器里访问你的git项目名就ok了
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+        <p>The Most Simple Blog.
 </p>
       </div>
     </div>
