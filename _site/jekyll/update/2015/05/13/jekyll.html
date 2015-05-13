@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Welcome to Jekyll!</title>
-  <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+  <title>关于使用jekyll构建blog</title>
+  <meta name="description" content="使用环境，mac预制了ruby， 然后使用 $ gem install jekyll –pre 即可。在此之前确保你安装了xcode commendline tools安装完毕后cd到你的开发目录下面使用jekyll命令：">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="www.baidu.com/jekyll/update/2015/05/13/welcome-to-jekyll.html">
+  <link rel="canonical" href="www.baidu.com/jekyll/update/2015/05/13/jekyll.html">
   <link rel="alternate" type="application/rss+xml" title="WZQ" href="www.baidu.com/feed.xml">
 </head>
 
@@ -57,24 +57,41 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Welcome to Jekyll!</h1>
-    <p class="post-meta"><time datetime="2015-05-13T00:31:36+08:00" itemprop="datePublished">May 13, 2015</time></p>
+    <h1 class="post-title" itemprop="name headline">关于使用jekyll构建blog</h1>
+    <p class="post-meta"><time datetime="2015-05-13T00:00:00+08:00" itemprop="datePublished">May 13, 2015</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+    <p>使用环境，mac预制了ruby， 然后使用 $ gem install jekyll –pre 即可。
+在此之前确保你安装了xcode commendline tools
+安装完毕后cd到你的开发目录下面使用jekyll命令：</p>
 
-<p>To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention <code>YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">jekyll</span> <span class="kp">new</span> <span class="n">myblog</span>
+<span class="err">$</span> <span class="n">cd</span> <span class="n">myblog</span>
+<span class="err">$</span> <span class="n">jekyll</span> <span class="n">serve</span></code></pre></div>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p>在浏览器 localhost:4000 ok 界面出来了 你看到就是一个简单的博客的界面了。</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></div>
+<p>使用之前首先要看一下jekyll的目录结构<a href="http://jekyllrb.com/docs/home">Jekyll docs</a>，官方文档很详细，
+不过描述不够清晰，反正我开始看着有点晕。
+一个关键文件：config.xml 总配置文件，属性非常之多，具体查看文档。
+三个关键目录:include, layout, posts.</p>
 
-<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.</p>
+<p>include：存放复用的代码，比如head foot,用的时候只需要include就行。
+post：存放你的内容，不需要使用的是<a href="http://wowubuntu.com/markdown/">markdown</a>比html更简洁 不过需要花时间学习
+layout：存放代码模版，调用方式以本文为例：</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">---</span>
+<span class="ss">layout: </span><span class="n">post</span>
+<span class="ss">title:  </span><span class="s2">"关于使用jekyll构建blog"</span>
+<span class="ss">date:   </span><span class="mi">2015</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">13</span>
+<span class="ss">categories: </span><span class="n">jekyll</span> <span class="n">update</span>
+<span class="o">---</span>
+
+<span class="o">&lt;!--</span> <span class="err">你的文本内容</span> <span class="o">--&gt;</span></code></pre></div>
+
+<p>了解完目录后差不多该发布了，首先在你的github下创建一个名为xxx.github.io的项目，将你的
+jekyll项目update到这个github，浏览器里访问你的git项目名就ok了。<a href="https://pages.github.com/">官方教程</a></p>
 
 
   </div>
