@@ -35,5 +35,40 @@
   mtime: 2015-05-12 16:31:36.000000000 +08:00
   deps: []
 /Users/wzq/Documents/git/wzq.github.io/_includes/header.html:
-  mtime: 2015-05-13 12:11:25.000000000 +08:00
+  mtime: 2015-05-13 12:14:57.000000000 +08:00
   deps: []
+/Users/wzq/Documents/git/wzq.github.io/_posts/2015-05-12-gradle-signedapk.markdown:
+  mtime: 2015-05-14 10:35:50.000000000 +08:00
+  deps:
+  - /Users/wzq/Documents/git/wzq.github.io/_layouts/post.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/head.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/header.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/footer.html
+  - /Users/wzq/Documents/git/wzq.github.io/_layouts/default.html
+/Users/wzq/Documents/git/wzq.github.io/_includes/footer.html:
+  mtime: 2015-05-12 16:31:36.000000000 +08:00
+  deps: []
+/Users/wzq/Documents/git/wzq.github.io/_posts/2015-05-13-jekyll副本.markdown:
+  mtime: 2015-05-13 11:59:46.000000000 +08:00
+  deps:
+  - /Users/wzq/Documents/git/wzq.github.io/_layouts/post.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/head.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/header.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/footer.html
+  - /Users/wzq/Documents/git/wzq.github.io/_layouts/default.html
+/Users/wzq/Documents/git/wzq.github.io/_posts/2015-05-13-as.markdown:
+  mtime: 2015-05-13 11:59:46.000000000 +08:00
+  deps:
+  - /Users/wzq/Documents/git/wzq.github.io/_layouts/post.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/head.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/header.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/footer.html
+  - /Users/wzq/Documents/git/wzq.github.io/_layouts/default.html
+/Users/wzq/Documents/git/wzq.github.io/_posts/2015-05-11-as.markdown:
+  mtime: 2015-05-13 11:59:46.000000000 +08:00
+  deps:
+  - /Users/wzq/Documents/git/wzq.github.io/_layouts/post.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/head.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/header.html
+  - /Users/wzq/Documents/git/wzq.github.io/_includes/footer.html
+  - /Users/wzq/Documents/git/wzq.github.io/_layouts/default.html
