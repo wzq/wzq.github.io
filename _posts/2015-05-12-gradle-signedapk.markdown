@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "使用gradle批量打包"
-date:   2015-05-12
-categories: jekyll update
+categories: [gradle]
+tags: [android, gradle]
 ---
 
 去年开始使用 _Android Studio_ 开发，到现在已经用的得心应手了，效率提高很多， 黑色的主题也很酷。  

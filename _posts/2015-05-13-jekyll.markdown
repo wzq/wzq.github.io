@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "关于使用jekyll构建blog"
-categories: [general, demo]
-tags: [demo, dbyll, dbtek]
-description: 使用环境，mac预制了ruby， 然后使用 $ gem install jekyll --pre 即可 
+categories: [jekyll]
+tags: [ruby, jekyll, blog]
 ---
 
 使用环境，mac预制了ruby， 然后使用 $ gem install jekyll --pre 即可  
