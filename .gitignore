@@ -8,3 +8,6 @@
 out
 gen
 
+_config.yml
+_site/*
+*Thumbs.db
