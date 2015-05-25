@@ -5,7 +5,7 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: wzq
+      title: blog
 
 description: My blog
 
@@ -14,8 +14,8 @@ author:
   email: 297001985@qq.com
   github: wzq
   twitter: zhengqi
-  pinterest: wzq
-  linkedin: wzq
+  # pinterest: wzq
+  # linkedin: wzq
   bio: My simple blog.
   email_md5: 726351295ec82e145928582f595aa3aa
 
