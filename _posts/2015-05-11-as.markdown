@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "使用android studio"
+title:  "android studio纪录"
 categories: [android]
-tags: [android, idea]
+tags: [idea]
 ---
+
 

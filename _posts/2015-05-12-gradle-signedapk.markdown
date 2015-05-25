@@ -2,7 +2,7 @@
 layout: post
 title:  "使用gradle批量打包"
 categories: [gradle]
-tags: [android, gradle]
+tags: [util]
 ---
 
 去年开始使用 _Android Studio_ 开发，到现在已经用的得心应手了，效率提高很多， 黑色的主题也很酷。  
