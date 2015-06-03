@@ -36,3 +36,5 @@ Android Lollipop用google的话说到目前为止最伟大的android版本，很
 
 ### 编辑文本浮动标签 ###  
 <img style="margin-left: auto;margin-right: auto;width:200px;" src="/assets/image/textinputlayout.png">  
+
+float 方式的显示hint
