@@ -5,7 +5,7 @@ categories: [gradle]
 tags: [util]
 ---
 
-去年开始使用 _Android Studio_ 开发，到现在已经用的得心应手了，效率提高很多， 黑色的主题也很酷。  
+去年开始使用 _Android Studio_ 开发，效率提高很多， 黑色的主题也很酷。  
 几天纪录下如何使用gradle 批量打包以及 某些常量的动态配置。  
 首先需要理解[gradle][0]基础, 一种新的项目结构，类似maven， 但更好用  
 
