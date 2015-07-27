@@ -4,6 +4,9 @@ title:  "android studio plugin"
 categories: [android]
 tags: [scala]
 ---
+
+# 比较常用的插件分享
+
 --------------------------------------
 
 * [Scala](http://confluence.jetbrains.com/display/IntelliJIDEA/Scala) 可以使用scala开发android [文档](http://macroid.github.io/ScalaOnAndroid.html)
