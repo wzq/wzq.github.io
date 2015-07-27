@@ -4,9 +4,14 @@ body{
 	color: #2c3e50;
 }
 
-.imgtest{
+.img-slide{
 	width: 100px;
 	height: 100px;
+	border-radius:50%}
+
+.img-bottom{
+	width: 30px;
+	height: 30px;
 	border-radius:50%}
 
 .sidebar {
