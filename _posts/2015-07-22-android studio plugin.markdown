@@ -5,9 +5,9 @@ categories: [android]
 tags: [scala]
 ---
 
-分享几个比较常用的插件
+分享几个比较常用的[插件](http://plugins.jetbrains.com/?androidstudio)
 
---------------------------------------
+------------------------------
 
 * [Scala](http://confluence.jetbrains.com/display/IntelliJIDEA/Scala) 可以使用scala开发android [文档](http://macroid.github.io/ScalaOnAndroid.html)
 
@@ -24,7 +24,3 @@ tags: [scala]
 * [SelectorChapek for Android](https://github.com/inmite/android-selector-chapek) 自动生成selector drawable
 
 * __Sexy Editor__ 顾名思义，炫酷的编辑器 
-
-----------------------------------------
-
-### [Plugins Top 10](http://plugins.jetbrains.com/?androidstudio)
