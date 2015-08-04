@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Use JAVA 8's lambda functions in Android"
+categories: [android]
+tags: [tools]
+---
+

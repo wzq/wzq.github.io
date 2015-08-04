@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "use scala"
+title:  "open resource"
 categories: [android]
-tags: [scala]
+tags: [github]
 ---
 
