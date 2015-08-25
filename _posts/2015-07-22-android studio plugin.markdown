@@ -2,7 +2,7 @@
 layout: post
 title:  "android studio plugin"
 categories: [android]
-tags: [scala]
+tags: [2015-07]
 ---
 
 分享几个比较常用的[插件](http://plugins.jetbrains.com/?androidstudio) (* 标柱的只有github项目) 

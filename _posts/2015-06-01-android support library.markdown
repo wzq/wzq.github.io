@@ -2,7 +2,7 @@
 layout: post
 title:  "android support library"
 categories: [android]
-tags: [Lollipop]
+tags: [2015-06]
 ---
 
 Android Lollipop用google的话说到目前为止最伟大的android版本，很大程度上
