@@ -5,14 +5,14 @@ categories: [android]
 tags: [2015-11]
 ---
 
-优点: 
+该方案的优缺点如下 
 
+优点: 
  * [Scala](http://www.scala-lang.org/) 成熟强大稳定的jvm语言，性能进于java，支持函数式编程。
  * 对java的全面兼容。 
  * 有[macroid](http://macroid.github.io/ScalaOnAndroid.html), [scaloid](https://github.com/pocorall/scaloid)等丰富的开源项目
 
 缺点: 
-
 * Scala庞大的库会导致你的apk体积变大，同时增加了学习成本
 * Scala提倡使用sbt构件项目而android提倡使用gradle构件
 
