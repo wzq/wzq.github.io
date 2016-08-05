@@ -1,14 +1,13 @@
 ---
 layout: post
-title:  "常见问题1"
+title:  "Hashmap工作原理"
 categories: [interview]
 tags: [2016-08]
 ---
 
-#### Hashmap工作原理 ####  
 在java编程语言中，最基本的结构就是两种，一个是数组，另外一个是模拟指针（引用），所有的数据结构都可以用这两个基本结构来构造的，HashMap也不例外。HashMap实际上是一个“链表散列”的数据结构，即数组和链表的结合体。  
 
-```java  
+{% highlight ruby %}  
 /** 
  * The table, resized as necessary. Length MUST Always be a power of two. 
  */  
@@ -21,4 +20,7 @@ static class Entry<K,V> implements Map.Entry<K,V> {
     final int hash;  
     ……  
 }  
-```
+{% endhighlight %}  
+可以看出，Entry就是数组中的元素，每个 Map.Entry 其实就是一个key-value对，它持有一个指向下一个元素的引用，这就构成了链表。  
+
+当我们往hashmap中put元素的时候，先根据key的hash值得到这个元素在数组中的位置（即下标），然后就可以把这个元素放到对应的位置中了。如果这个元素所在的位子上已经存放有其他元素了，那么在同一个位子上的元素将以链表的形式存放，新加入的放在链头，最先加入的放在链尾。从hashmap中get元素时，首先计算key的hashcode，找到数组中对应位置的某一元素，然后通过key的equals方法在对应位置的链表中找到需要的元素。从这里我们可以想象得到，如果每个位置上的链表只有一个元素，那么hashmap的get效率将是最高的。
