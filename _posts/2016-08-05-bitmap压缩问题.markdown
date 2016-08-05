@@ -1,0 +1,57 @@
+---
+layout: post
+title:  "bitmap压缩问题"
+categories: [interview]
+tags: [2016-08]
+---
+
+设置多张图片时bitmap过大会占用大量内存，可能导致oom。
+通常会对图片进行压缩工作，网上常用的两种方法如下 
+
+{% highlight ruby %}
+ByteArrayOutputStream baos =  new  ByteArrayOutputStream();
+image.compress(Bitmap.CompressFormat.JPEG,  100 , baos);
+int  options =  100 ;
+while  ( baos.toByteArray().length /  1024 > 100 ) {
+    baos.reset();
+    image.compress(Bitmap.CompressFormat.JPEG, options, baos);
+    options -=  10 ;
+}
+ByteArrayInputStream isBm =  new  ByteArrayInputStream(baos.toByteArray());
+Bitmap bitmap = BitmapFactory.decodeStream(isBm,  null ,  null ); 
+{% endhighlight %}  
+
+将图片质量压缩到100k以内，注意只是压缩图片质量，不会压缩像素，执行完后生成的bitmap所占内存大小并没有改变。如果想减少bitmap所占内存，则需要根据实际情况计算inSampleSize(缩放比例)进行缩放。具体方法如下：
+
+{% highlight ruby %}
+public static Bitmap compressBitmap(Bitmap image, float pixelW, float pixelH){
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        image.compress(Bitmap.CompressFormat.JPEG, 100, os);
+        if( os.toByteArray().length / 1024>1024) {
+            os.reset();
+            image.compress(Bitmap.CompressFormat.JPEG, 50, os);
+        }
+        ByteArrayInputStream is = new ByteArrayInputStream(os.toByteArray());
+        BitmapFactory.Options newOpts = new BitmapFactory.Options();
+        newOpts.inJustDecodeBounds = true;
+        newOpts.inPreferredConfig = Bitmap.Config.RGB_565;
+        BitmapFactory.decodeStream(is, null, newOpts);
+        newOpts.inJustDecodeBounds = false;
+        int w = newOpts.outWidth;
+        int h = newOpts.outHeight;
+        float hh = pixelH;
+        float ww = pixelW;
+        int be = 1;
+        if (w > h && w > ww) {
+            be = (int) (newOpts.outWidth / ww);
+        } else if (w < h && h > hh) {
+            be = (int) (newOpts.outHeight / hh);
+        }
+        if (be <= 0) be = 1;
+        newOpts.inSampleSize = be;
+        is = new ByteArrayInputStream(os.toByteArray());
+        return BitmapFactory.decodeStream(is, null, newOpts);
+}
+{% endhighlight %}  
+上述方法是通过计算view与图片的大小比例进行缩放，pixelw表示view的宽，pixelh表示view的高。
+
