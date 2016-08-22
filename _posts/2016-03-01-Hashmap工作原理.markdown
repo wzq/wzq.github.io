@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hashmap工作原理"
-categories: [interview]
+categories: [java]
 tags: [2016-03]
 ---
 

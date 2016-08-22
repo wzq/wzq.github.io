@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "使用gradle批量打包"
-categories: [gradle]
+categories: [android]
 tags: [2015-05]
 ---
 
