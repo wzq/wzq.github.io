@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "android图片加载库简单对比"
+categories: [android]
+tags: [2016-04]
+---
+
+图片加载是开发中最长用到的功能，列出目前github上star最多的几个开源库  
+
+* [Universal-Image-Loader](https://github.com/nostra13/Android-Universal-Image-Loader)
+* [Picasso](https://github.com/square/picasso)
+* [Glide](https://github.com/bumptech/glide)
+* [Fresco](https://github.com/facebook/fresco)  
+<br/>
+
+#### **1.Universal-Image-Loader** #####
+
+比较老的一个库，使用量也相当多，之前做过的项目很多都在使用这个库。使用感受：配置灵活，稳定可靠，功能齐全。作者已经停止更新和bug修复工作，不推荐继续使用。  
+<br/>
+  
+#### **2.Picasso** #####
+
+Picasso出自 square 公司，这个以画家毕加索命名的库，确实在使用上十分的优雅：  
+{% highlight java %}
+    Picasso.with(context).load(url).into(view);
+{% endhighlight %} 
+用起来就是这么简单。图片裁剪，圆角等功能也都支持，而去还可以开启debug模式查看图片是从网络，本地，还是缓存来的。配合 square 全家桶使用，兴许有加成。  
+<br/>  
+
+#### **3.Glide** #####
+
+Glide 是由google员工开发的，已用到多个google开源项目中  
+Glide 是在picasso的基础上开发的，所以使用风格与picasso极为相似  
+Picasso 默认Bitmap格式是 `ARGB8888` ，Glide默认的Bitmap格式是 `RGB565` ,比 `ARGB8888` 格式的内存开销要小一半  
+Picasso 默认缓存保存原始图每次加载时重新绘制。Glide 默认缓存保存的图片大小与imageview大小一致。Glide会对不同展示大小的同一图片分别下载缓存,可以通过
+{% highlight java %}
+    .diskCacheStrategy(DiskCacheStrategy.ALL)
+{% endhighlight %} 
+缓存全尺寸图片，使加载变快，但需要更多的缓存空间。Glide支持 `gif` 。  
+<br/>  
+
+#### **4.Fresco** #####
+
+Fresco由 Facebook 出品, 当然也被用于 Facebook 自家的产品中，下面特性摘自[Fresco官方中文文档](http://www.fresco-cn.org/)  
+
+* 在5.0以下系统，Fresco将图片放到一个特别的内存区域。当然，在图片不显示的时候，占用的内存会自动被释放。这会使得APP更加流畅，减少因图片内存占用而引发的OOM。 
+* 渐进式的JPEG图片格式已经流行数年了，渐进式图片格式先呈现大致的图片轮廓，然后随着图片下载的继续，呈现逐渐清晰的图片，这对于移动设备，尤其是慢网络有极大的利好，可带来更好的用户体验。  
+
+Fresco很强大，很复杂，库的大小比起上面3个要大很多，如果不是对图片加载有特别要求的,Glide足够了。  
+<br/>  
+
+#### **总结** #####
+
+根据实际需求选择工具才能事半功倍。

@@ -5,6 +5,35 @@ categories: [jekyll]
 tags: [2015-05]
 ---
 
+2016/08/19 更新  
+
+关于适用 `pygments` 设置代码高亮样式。
+
+安装 pygments  
+{% highlight ruby %}
+    easy_install pip
+    pip install pygments
+{% endhighlight %}  
+
+
+
+
+-----------------------------------------------
+
+2016/08/15 更新  
+
+关于jekyll本地启动时，haven't included the [jekyll-paginate][jekyll-paginate] gem问题解决方法  
+
+1. 确保已经安装了 [jekyll-paginate][jekyll-paginate] ,若没有执行命令  
+ `$ gem install jekyll-paginate`  
+
+2. 在_config文件中添加  
+``gems: [jekyll-paginate]``  
+
+[jekyll-paginate]:(https://github.com/jekyll/jekyll-paginate)
+
+-----------------------------------------------
+
 使用环境，mac预制了ruby， 然后使用 $ gem install jekyll --pre 即可  
 在此之前确保你安装了xcode commendline tools  
 安装完毕后cd到你的开发目录下面使用jekyll命令：

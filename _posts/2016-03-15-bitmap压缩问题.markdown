@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "bitmap压缩问题"
-categories: [interview]
-tags: [2016-08]
+categories: [android]
+tags: [2016-03]
 ---
 
 设置多张图片时bitmap过大会占用大量内存，可能导致oom。

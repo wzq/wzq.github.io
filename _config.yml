@@ -28,3 +28,8 @@ paginate: 5 # pagination based on number of posts
 paginate_path: "page:num"
 
 safe: true
+
+#highlighter: pygments
+
+# Gems
+gems: [jekyll-paginate]
