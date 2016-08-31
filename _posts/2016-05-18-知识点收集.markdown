@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "知识点收集"
+categories: [android]
+tags: [2016-05]
+---
+
+1.尽管 `Message` 的构造器是公开的，但是获取 `Message` 对象的最好方法是调用 `Message.obtain()` 或者 `Handler.obtainMessage()` ，这样是从一个可回收对象池中获取Message对象。看下源码
+{% highlight java %}
+   /**
+     * Return a new Message instance from the global pool. Allows us to
+     * avoid allocating new objects in many cases.
+     */
+    public static Message obtain() {
+        synchronized (sPoolSync) {
+            if (sPool != null) {
+                Message m = sPool;
+                sPool = m.next;
+                m.next = null;
+                m.flags = 0; // clear in-use flag
+                sPoolSize--;
+                return m;
+            }
+        }
+        return new Message();
+    }
+{% endhighlight %}   
+<br/>
+
+2.加载so库时，抛出的是throwable不是exception。  
+<br/>
+
+3.Android中不允许在依赖库中使用switch-case访问资源id，原因是case后面跟的参数必须是常量，而library中的生成的资源id都不是常量。  
+<br/>
+
+4.API level 11+之后当使用 `fragment` 或者 `dialogfragment` 时出现异常 
+{% highlight java %}
+  Can not perform this action after onSaveInstanceState 
+{% endhighlight %}   
+分析原因:[记一个DialogFragment.show()的Bug](http://www.jianshu.com/p/f6570ce9e413)  
+fragment中使用commitAllowingStateLoss替代commit  
+<br/>
+
+5.clipToPadding 表示空间的绘制范围是否在padding之内，默认值是true。在viewpager中设置为false可将多个fragment显示在同一视图。  
+<br/>
+
+6.`android:overScrollMode="never"` 可将viewpager切换时的渐进效果。  
+<br/>
+
+7.矢量图的生成和引入  
+<br/>
+
+8.java常用集合类的原理，android线程分析，java内存管理
+
+
+
+
+
+
+
+
