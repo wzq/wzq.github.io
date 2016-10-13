@@ -40,7 +40,8 @@ tags: [2016-05]
 分析原因:[记一个DialogFragment.show()的Bug](http://www.jianshu.com/p/f6570ce9e413)，fragment中使用commitAllowingStateLoss替代commit  
 <br/>
 
-5.clipToPadding 表示空间的绘制范围是否在padding之内，默认值是true。在viewpager中设置为false可将多个fragment显示在同一视图。  
+5.clipToPadding 表示空间的绘制范围是否在padding之内，默认值是true。在viewpager中设置为false可将多个fragment显示在同一视图。
+clipChildren 表示是否限制其子View在其范围内。设置false子View的绘制范围可超出父view。  
 <br/>
 
 6.`android:overScrollMode="never"` 可将viewpager取消切换时的渐进效果。  
